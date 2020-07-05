@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wallet
+    username: postgres
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8089
+
+
+# JWT values :
+
+jwt:
+  token:
+    header: Authorization
+    param: token
+    prefix: "Bearer "
+    expiration: 6000000
+    private-key: abcdefg
+    public-key: abcdefg
+
+  refresh-token:
+    expiration: 12000000
+    private-key: 123456
+
+sms:
+    code:
+      length: "5"
+
+
+
